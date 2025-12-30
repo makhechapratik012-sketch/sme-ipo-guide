@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME IPO Guide: Opportunities for CAs in Jamnagar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Typography & Scrollbar */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        body {
+            background-color: #faf9f6; /* Off-white/Alabaster */
+            color: #1a202c;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c05621; /* Burnt Orange/Copper for Jamnagar Brass */
+            border-radius: 4px;
+        }
+
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 300px;
+            max-height: 350px;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+
+        /* Navigation Active State */
+        .nav-active {
+            border-bottom: 3px solid #c05621;
+            color: #7b341e;
+            font-weight: 700;
+        }
+
+        /* Interactive Element Styles */
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .fade-in { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Markdown Styles for AI Output */
+        .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1em; margin-bottom: 0.5em; color: #2d3748; }
+        .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+        .prose li { margin-bottom: 0.5em; }
+        .prose strong { color: #c05621; }
+        .prose p { margin-bottom: 1em; line-height: 1.6; }
+        
+        /* Table Styles */
+        .criteria-table td, .criteria-table th { padding: 12px; border-bottom: 1px solid #edf2f7; }
+        .criteria-table tr:last-child td { border-bottom: none; }
+        .criteria-table th { background-color: #f7fafc; text-align: left; font-size: 0.85rem; color: #718096; text-transform: uppercase; letter-spacing: 0.05em; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="h-10 w-10 bg-orange-700 text-white rounded-lg flex items-center justify-center font-bold text-xl mr-3">CA</div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 tracking-tight">SME IPO Advisory</h1>
+                        <p class="text-xs text-orange-700 font-semibold tracking-wide uppercase">Jamnagar Practice Guide</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-4 items-center">
+                    <button onclick="navigate('dashboard')" class="nav-btn nav-active px-2 py-4 text-sm font-medium transition-colors" data-target="dashboard">Executive Summary</button>
+                    <button onclick="navigate('guide')" class="nav-btn px-2 py-4 text-sm font-medium text-gray-500 hover:text-orange-700 transition-colors" data-target="guide">Regulatory</button>
+                    <button onclick="navigate('jamnagar')" class="nav-btn px-2 py-4 text-sm font-medium text-gray-500 hover:text-orange-700 transition-colors" data-target="jamnagar">Market</button>
+                    <button onclick="navigate('toolkit')" class="nav-btn px-2 py-4 text-sm font-medium text-gray-500 hover:text-orange-700 transition-colors" data-target="toolkit">Toolkit 🛠️</button>
+                    <button onclick="navigate('contacts')" class="nav-btn px-2 py-4 text-sm font-medium text-gray-500 hover:text-orange-700 transition-colors" data-target="contacts">Network 🤝</button>
+                    <button onclick="navigate('ai-consultant')" class="nav-btn px-2 py-4 text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors flex items-center gap-1" data-target="ai-consultant">
+                        <span>✨ AI Consultant</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- VIEW 1: EXECUTIVE DASHBOARD -->
+        <section id="dashboard" class="fade-in">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-8">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">The "Unlisted to Listed" Opportunity</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-4xl">
+                        For a newly qualified Chartered Accountant in Jamnagar, the SME IPO market represents the highest value-addition service line. With over <strong>900+ SMEs listed</strong> on BSE SME & NSE Emerge raising over <strong>₹15,000 Cr</strong>, the trend is shifting from bank debt to equity capital.
+                        <br><br>
+                        Jamnagar, known as the "Brass City," houses thousands of proprietary firms ripe for <strong>corporatization</strong>. Your role evolves from a tax filer to a <strong>CFO-level Strategic Advisor</strong>.
+                    </p>
+                </div>
+                <div class="bg-gray-50 px-8 py-6 border-t border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Market Cap Growth</p>
+                        <p class="text-2xl font-bold text-gray-900 mt-1">45% CAGR</p>
+                        <p class="text-sm text-gray-500">In SME Exchange Market Cap (2020-2024)</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Target Client Size</p>
+                        <p class="text-2xl font-bold text-gray-900 mt-1">₹15Cr - ₹200Cr</p>
+                        <p class="text-sm text-gray-500">Revenue sweet spot for listing</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Professional Scope</p>
+                        <p class="text-2xl font-bold text-orange-700 mt-1">End-to-End</p>
+                        <p class="text-sm text-gray-500">Structuring → Due Diligence → Listing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Visual: Debt vs Equity -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Why Clients Will Listen</h3>
+                    <p class="text-sm text-gray-500 mb-4">Comparing Cost of Capital: Bank Loan vs IPO Valuation</p>
+                    <div class="chart-container">
+                        <canvas id="debtVsEquityChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Navigation Cards -->
+                <div class="grid grid-cols-1 gap-4 content-start">
+                    <div onclick="navigate('contacts')" class="card-hover cursor-pointer bg-white p-6 rounded-xl border border-gray-200 hover:border-orange-300 transition-all">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900">🤝 Strategic Contacts</h4>
+                                <p class="text-sm text-gray-600 mt-1">Connect with Jamnagar Associations & Bankers.</p>
+                            </div>
+                            <span class="text-2xl">➔</span>
+                        </div>
+                    </div>
+                    <div onclick="navigate('guide')" class="card-hover cursor-pointer bg-white p-6 rounded-xl border border-gray-200 hover:border-orange-300 transition-all">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900">⚖️ Regulatory Criteria</h4>
+                                <p class="text-sm text-gray-600 mt-1">Detailed comparison of BSE SME vs NSE Emerge listing norms.</p>
+                            </div>
+                            <span class="text-2xl">➔</span>
+                        </div>
+                    </div>
+                    <div onclick="navigate('toolkit')" class="card-hover cursor-pointer bg-white p-6 rounded-xl border border-gray-200 hover:border-orange-300 transition-all">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900">🛠️ Action Toolkit</h4>
+                                <p class="text-sm text-gray-600 mt-1">Check detailed exchange eligibility & gaps.</p>
+                            </div>
+                            <span class="text-2xl">➔</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: THE GUIDE (Detailed Criteria) -->
+        <section id="guide" class="hidden fade-in">
+            <div class="bg-blue-900 text-white rounded-xl p-8 mb-8">
+                <h2 class="text-3xl font-bold mb-2">Regulatory Listing Norms</h2>
+                <p class="text-blue-200">A detailed technical comparison for the Chartered Accountant to decide the best exchange for the client.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Comparison Table -->
+                <div class="lg:col-span-8">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="font-bold text-xl text-gray-900">BSE SME vs. NSE Emerge Criteria</h3>
+                            <p class="text-sm text-gray-500">Key quantitative thresholds for eligibility.</p>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left criteria-table">
+                                <thead>
+                                    <tr>
+                                        <th class="w-1/4 pl-6">Parameter</th>
+                                        <th class="w-1/3 text-blue-800 bg-blue-50">BSE SME</th>
+                                        <th class="w-1/3 text-orange-800 bg-orange-50">NSE Emerge</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white">
+                                    <tr>
+                                        <td class="pl-6 font-semibold text-gray-700">Post-Issue Paid-up Capital</td>
+                                        <td>Max ₹25 Crores</td>
+                                        <td>Max ₹25 Crores</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-6 font-semibold text-gray-700">Net Tangible Assets</td>
+                                        <td>Min ₹1.5 Crores</td>
+                                        <td>Not Explicitly Stated (Focus on Net Worth)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-6 font-semibold text-gray-700">Track Record</td>
+                                        <td>Min 3 Years of Operations</td>
+                                        <td>Min 3 Years of Operations</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-6 font-semibold text-gray-700">Profitability (Operating)</td>
+                                        <td>Positive in 2 out of last 3 financial years</td>
+                                        <td>Positive Cash Accruals (EBITDA) in 2 years</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-6 font-semibold text-gray-700">Net Worth</td>
+                                        <td>Must be Positive (excluding Revaluation Reserves)</td>
+                                        <td>Must be Positive</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-6 font-semibold text-gray-700">Website</td>
+                                        <td>Mandatory</td>
+                                        <td>Mandatory</td>
+                                    </tr>
+                                     <tr>
+                                        <td class="pl-6 font-semibold text-gray-700">Disciplinary Action</td>
+                                        <td>No pending action against promoters by SEBI/RBI</td>
+                                        <td>No pending action against promoters by SEBI/RBI</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
+                        <h4 class="font-bold text-yellow-800 text-sm flex items-center mb-1">
+                            <span class="mr-2">💡</span> CA Insight for Jamnagar Clients
+                        </h4>
+                        <p class="text-xs text-yellow-900">
+                            Many Jamnagar brass units have high asset bases (machinery/land). <strong>BSE SME</strong> specifically asks for ₹1.5 Cr Net Tangible Assets, making asset-heavy manufacturing units naturally eligible. <strong>NSE Emerge</strong> focuses more on cash accruals, favoring high-margin or service-oriented businesses.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Col: The Timeline Process (Condensed) -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="font-bold text-lg text-gray-900 mb-4">Migration to Main Board</h3>
+                        <p class="text-sm text-gray-600 mb-4">The ultimate goal. Companies can migrate to BSE/NSE Main Board after 2 years if:</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start">
+                                <div class="bg-green-100 p-1 rounded mr-2 text-green-700 text-xs">1</div>
+                                <span class="text-gray-700">Paid-up Capital crosses ₹10 Crores.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-green-100 p-1 rounded mr-2 text-green-700 text-xs">2</div>
+                                <span class="text-gray-700">Market Capitalization crosses ₹25 Crores.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-green-100 p-1 rounded mr-2 text-green-700 text-xs">3</div>
+                                <span class="text-gray-700">Shareholder approval via Special Resolution.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: JAMNAGAR CONTEXT -->
+        <section id="jamnagar" class="hidden fade-in">
+             <div class="bg-orange-50 rounded-xl p-8 mb-8 border border-orange-100">
+                <h2 class="text-3xl font-bold text-orange-900 mb-2">Jamnagar: The Brass Capital</h2>
+                <p class="text-orange-800">Home to 70% of India's brass parts production. The ecosystem is massive but informal.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Industry Breakdown Chart -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">Jamnagar Industrial Composition</h3>
+                    <div class="chart-container">
+                        <canvas id="jamnagarChart"></canvas>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 text-center">Data estimates based on GIDC unit registrations.</p>
+                </div>
+                <!-- Industrial Zones Analysis -->
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start">
+                        <div class="bg-yellow-100 text-yellow-700 p-3 rounded-lg mr-4 text-xl">⚙️</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Shankar Tekri & Dared GIDC</h4>
+                            <p class="text-sm text-gray-600 mt-1">The heart of the Brass industry. <br><strong>Target Client:</strong> Manufacturers of precision components. They need capital for CNC automation.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start">
+                        <div class="bg-gray-100 text-gray-700 p-3 rounded-lg mr-4 text-xl">🛢️</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Petroleum Ancillaries</h4>
+                            <p class="text-sm text-gray-600 mt-1">Units supporting Reliance & Nayara Energy. <br><strong>Target Client:</strong> Logistics, maintenance, and safety equipment suppliers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 4: TOOLKIT (With New Engine) -->
+        <section id="toolkit" class="hidden fade-in">
+             <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">CA's Action Toolkit</h2>
+                <p class="text-gray-500 mt-2">Professional tools for eligibility assessment, gap analysis, and fee estimation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                
+                <!-- NEW TOOL: Exchange Eligibility Engine -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col col-span-1 lg:col-span-2">
+                    <div class="border-b border-gray-100 pb-4 mb-4 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-xl text-blue-900 flex items-center gap-2">🏛️ Exchange Eligibility Engine</h3>
+                            <p class="text-sm text-gray-500">Enter client data to check qualification for BSE SME or NSE Emerge.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Inputs -->
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">Post-Issue Paid-up Capital (₹ Cr)</label>
+                                    <input type="number" id="check-capital" placeholder="e.g. 10" class="w-full border-gray-300 rounded p-2 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">Net Tangible Assets (₹ Cr)</label>
+                                    <input type="number" id="check-assets" placeholder="e.g. 2.5" class="w-full border-gray-300 rounded p-2 text-sm">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">Net Worth (₹ Cr)</label>
+                                    <input type="number" id="check-networth" placeholder="e.g. 15" class="w-full border-gray-300 rounded p-2 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">Op. Profit (Positive Yrs in Last 3)</label>
+                                    <select id="check-profit" class="w-full border-gray-300 rounded p-2 text-sm">
+                                        <option value="3">3 Years</option>
+                                        <option value="2">2 Years</option>
+                                        <option value="1">1 Year</option>
+                                        <option value="0">0 Years</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">Track Record (Years of Operation)</label>
+                                <input type="number" id="check-track" placeholder="e.g. 5" class="w-full border-gray-300 rounded p-2 text-sm">
+                            </div>
+                             <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">Disciplinary Action Pending?</label>
+                                <select id="check-discipline" class="w-full border-gray-300 rounded p-2 text-sm">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes (SEBI/RBI/ROC)</option>
+                                </select>
+                            </div>
+                            
+                            <button onclick="checkEligibility()" class="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 transition">Check Eligibility</button>
+                        </div>
+
+                        <!-- Results Panel -->
+                        <div class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-3 border-b border-gray-200 pb-2">Analysis Result</h4>
+                            
+                            <div id="result-bse" class="mb-3 p-3 rounded bg-white border border-gray-200 text-sm">
+                                <span class="font-bold block text-gray-500">BSE SME Status:</span>
+                                <span class="text-gray-400 italic">Waiting for input...</span>
+                            </div>
+                            
+                            <div id="result-nse" class="mb-3 p-3 rounded bg-white border border-gray-200 text-sm">
+                                <span class="font-bold block text-gray-500">NSE Emerge Status:</span>
+                                <span class="text-gray-400 italic">Waiting for input...</span>
+                            </div>
+
+                            <div id="result-suggestions" class="mt-4 hidden">
+                                <h5 class="text-xs font-bold text-red-600 uppercase mb-2">Gap Analysis & Suggestions:</h5>
+                                <ul class="text-xs text-gray-700 list-disc ml-4 space-y-1" id="suggestion-list">
+                                    <!-- JS Populated -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Fee Estimator -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col">
+                    <div class="border-b border-gray-100 pb-4 mb-4">
+                        <h3 class="font-bold text-lg text-gray-800">🧮 Fee Opportunity Estimator</h3>
+                        <p class="text-xs text-gray-500">Calculate potential revenue from one mandate.</p>
+                    </div>
+
+                    <div class="space-y-6 flex-grow">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Issue Size (Funds to Raise)</label>
+                            <input type="range" id="issueSize" min="5" max="50" value="15" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-orange-600" oninput="calculateFees()">
+                            <div class="flex justify-between text-xs text-gray-600 mt-1">
+                                <span>₹5 Cr</span>
+                                <span id="issueSizeVal" class="font-bold text-orange-700">₹15 Cr</span>
+                                <span>₹50 Cr</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Service Complexity</label>
+                            <select id="complexity" class="w-full border-gray-300 rounded-md shadow-sm p-2 bg-gray-50 text-sm" onchange="calculateFees()">
+                                <option value="low">Standard (Clean Books)</option>
+                                <option value="med" selected>Moderate (Need Restructuring)</option>
+                                <option value="high">High (Complex Merger)</option>
+                            </select>
+                        </div>
+                        
+                         <div class="bg-gray-900 text-white p-5 rounded-xl mt-auto">
+                            <div class="flex justify-between items-end mb-1 border-b border-gray-700 pb-1">
+                                <span class="text-xs text-gray-300">Restructuring & Advisory</span>
+                                <span class="text-sm font-mono" id="advisoryFee">₹0</span>
+                            </div>
+                            <div class="flex justify-between items-end mb-1 border-b border-gray-700 pb-1">
+                                <span class="text-xs text-gray-300">Certification & Diligence</span>
+                                <span class="text-sm font-mono" id="certFee">₹0</span>
+                            </div>
+                            <div class="mt-3 pt-1">
+                                <span class="block text-4xl font-bold text-orange-500" id="totalFee">₹0</span>
+                                <span class="block text-xs text-gray-400 mt-1">Total Estimated Billing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- 3. Immediate Roadmap Checklist -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">Your Immediate Roadmap</h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 text-orange-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0 mr-3">1</div>
+                            <p class="text-sm text-gray-600"><strong>Partner Up:</strong> Tie up with a boutique Merchant Banker in Mumbai/Ahmedabad.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 text-orange-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0 mr-3">2</div>
+                            <p class="text-sm text-gray-600"><strong>Peer Review:</strong> Ensure your firm holds a valid Peer Review certificate.</p>
+                        </div>
+                         <div class="flex items-start">
+                            <div class="bg-orange-100 text-orange-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0 mr-3">3</div>
+                            <p class="text-sm text-gray-600"><strong>Restatement:</strong> Master the art of restating financials for IPOs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 5: STRATEGIC CONTACTS (New Tab) -->
+        <section id="contacts" class="hidden fade-in">
+            <div class="bg-gray-800 text-white rounded-xl p-8 mb-8">
+                <h2 class="text-3xl font-bold mb-2">Strategic Contact Matrix</h2>
+                <p class="text-gray-300">Key stakeholders in Jamnagar and beyond to build your IPO Consortium.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Local Associations -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="bg-orange-50 p-4 border-b border-orange-100">
+                        <h3 class="font-bold text-orange-900 flex items-center gap-2">
+                            <span>🏭</span> Industry Gatekeepers
+                        </h3>
+                        <p class="text-xs text-orange-700 mt-1">Critical for client acquisition in Jamnagar.</p>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Jamnagar Factory Owners Association (JFOA)</h4>
+                            <p class="text-xs text-gray-500 mt-1">The primary body for Brass/Parts manufacturers. Regular seminars here are your #1 lead source.</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3">
+                            <h4 class="font-bold text-sm text-gray-800">Nawanagar Chamber of Commerce</h4>
+                            <p class="text-xs text-gray-500 mt-1">Broader trade body covering salt, chemicals, and logistics sectors.</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3">
+                            <h4 class="font-bold text-sm text-gray-800">GIDC Plot Holders Association</h4>
+                            <p class="text-xs text-gray-500 mt-1">Specific to Dared (Phase 2 & 3). Focus on engineering units.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: The Execution Team -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="bg-blue-50 p-4 border-b border-blue-100">
+                        <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                            <span>🤝</span> The Consortium Partners
+                        </h3>
+                        <p class="text-xs text-blue-700 mt-1">You cannot do it alone. You need these experts.</p>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Merchant Bankers (Lead Managers)</h4>
+                            <p class="text-xs text-gray-500 mt-1">Entities like Hem Securities, Beeline Capital, or Holani Consultants often operate in Gujarat. You need a tie-up.</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3">
+                            <h4 class="font-bold text-sm text-gray-800">Registrars (RTA)</h4>
+                            <p class="text-xs text-gray-500 mt-1">Link Intime, Bigshare Services, KFin Tech. They handle the share allocation logistics.</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3">
+                            <h4 class="font-bold text-sm text-gray-800">Market Makers</h4>
+                            <p class="text-xs text-gray-500 mt-1">Brokers who provide liquidity post-listing. Mandatory for SME IPOs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Regulatory & Gov -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="bg-green-50 p-4 border-b border-green-100">
+                        <h3 class="font-bold text-green-900 flex items-center gap-2">
+                            <span>🏛️</span> Govt & Regulatory
+                        </h3>
+                        <p class="text-xs text-green-700 mt-1">Subsidies and registrations.</p>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">District Industries Centre (DIC)</h4>
+                            <p class="text-xs text-gray-500 mt-1">Located in Jamnagar. Contact for Gujarat Industrial Policy subsidies on IPO expenses (often up to ₹5 Lakhs).</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3">
+                            <h4 class="font-bold text-sm text-gray-800">NSE/BSE Regional Offices</h4>
+                            <p class="text-xs text-gray-500 mt-1">Located in Ahmedabad (GIFT City / Ashram Road). Essential for liaisoning during approval phase.</p>
+                        </div>
+                         <div class="border-t border-gray-100 pt-3">
+                            <h4 class="font-bold text-sm text-gray-800">MSME Databank</h4>
+                            <p class="text-xs text-gray-500 mt-1">Ensure client is Udyam Registered to avail SME exchange benefits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-yellow-50 rounded-xl border border-yellow-200 flex items-center gap-4">
+                <span class="text-2xl">💡</span>
+                <div>
+                    <h4 class="font-bold text-yellow-900">Pro Tip: The "Consortium Approach"</h4>
+                    <p class="text-sm text-yellow-800 mt-1">
+                        Don't try to be a "one-stop shop" initially. Position yourself as the <strong>Strategic Advisor</strong> who brings this entire network to the client's doorstep. Your value is in <em>coordination</em> and <em>financial preparation</em>, not in merchant banking itself.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 6: AI CONSULTANT -->
+        <section id="ai-consultant" class="hidden fade-in">
+            <div class="bg-indigo-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-2">✨ AI Strategy Consultant</h2>
+                    <p class="text-indigo-200">Powered by Google Gemini. Get instant strategic analysis and draft documents for your clients.</p>
+                </div>
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-indigo-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- TOOL 1: IPO Roadmap Generator -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col h-full">
+                    <div class="p-6 border-b border-gray-100 bg-gray-50 rounded-t-xl">
+                        <h3 class="font-bold text-xl text-gray-900 flex items-center gap-2">
+                            <span>🚀</span> Strategic Roadmap Generator
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">Input client details to generate a 3-point action plan.</p>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Industry / Sector</label>
+                            <input type="text" id="ai-industry" placeholder="e.g. Brass Components Manufacturer" class="w-full border-gray-300 rounded-md shadow-sm p-2 text-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Annual Turnover (approx)</label>
+                            <input type="text" id="ai-turnover" placeholder="e.g. ₹45 Crores" class="w-full border-gray-300 rounded-md shadow-sm p-2 text-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Current Structure</label>
+                            <select id="ai-structure" class="w-full border-gray-300 rounded-md shadow-sm p-2 text-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                <option>Partnership Firm</option>
+                                <option>Proprietorship</option>
+                                <option>Private Limited</option>
+                            </select>
+                        </div>
+                        <button onclick="generateGeminiResponse('roadmap')" class="mt-2 w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
+                            <span id="btn-text-roadmap">Generate Strategy ✨</span>
+                            <span id="spinner-roadmap" class="hidden animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TOOL 2: Drafting Assistant -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col h-full">
+                    <div class="p-6 border-b border-gray-100 bg-gray-50 rounded-t-xl">
+                        <h3 class="font-bold text-xl text-gray-900 flex items-center gap-2">
+                            <span>📝</span> Smart Drafting Assistant
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">Instantly draft formal documents for your practice.</p>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Document Type</label>
+                            <select id="ai-doc-type" class="w-full border-gray-300 rounded-md shadow-sm p-2 text-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="engagement">Engagement Letter for IPO Advisory</option>
+                                <option value="diligence">Initial Due Diligence Requisition List</option>
+                                <option value="pitch">Introductory Pitch Email to Client</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Client Name / Context</label>
+                            <input type="text" id="ai-client-name" placeholder="e.g. ABC Brass Works Ltd" class="w-full border-gray-300 rounded-md shadow-sm p-2 text-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <button onclick="generateGeminiResponse('draft')" class="mt-auto w-full bg-white border border-indigo-600 text-indigo-600 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-50 transition-colors flex items-center justify-center gap-2">
+                             <span id="btn-text-draft">Draft Document ✨</span>
+                             <span id="spinner-draft" class="hidden animate-spin h-4 w-4 border-2 border-indigo-600 border-t-transparent rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Area -->
+            <div id="ai-output-container" class="mt-8 hidden fade-in">
+                <div class="bg-white rounded-xl shadow-lg border border-indigo-100 p-8">
+                    <div class="flex justify-between items-center mb-4 border-b border-gray-100 pb-4">
+                        <h4 class="text-lg font-bold text-gray-900">Gemini Response</h4>
+                        <button onclick="copyToClipboard()" class="text-xs text-gray-500 hover:text-indigo-600 flex items-center gap-1">
+                            📋 Copy Text
+                        </button>
+                    </div>
+                    <div id="ai-result" class="prose max-w-none text-gray-700 text-sm"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-500">© 2025 SME IPO Opportunity Analysis. Generated for Chartered Accountants.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <span class="text-xs text-gray-400">Data Source: NSE Emerge / BSE SME Reports</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // --- Gemini API Logic ---
+        const apiKey = ""; // Set by environment
+
+        async function generateGeminiResponse(type) {
+            const btnText = document.getElementById(type === 'roadmap' ? 'btn-text-roadmap' : 'btn-text-draft');
+            const spinner = document.getElementById(type === 'roadmap' ? 'spinner-roadmap' : 'spinner-draft');
+            const outputContainer = document.getElementById('ai-output-container');
+            const resultDiv = document.getElementById('ai-result');
+
+            btnText.classList.add('hidden');
+            spinner.classList.remove('hidden');
+            outputContainer.classList.add('hidden');
+            resultDiv.innerHTML = '';
+
+            let prompt = "";
+            
+            if (type === 'roadmap') {
+                const industry = document.getElementById('ai-industry').value || "Manufacturing";
+                const turnover = document.getElementById('ai-turnover').value || "₹20 Crores";
+                const structure = document.getElementById('ai-structure').value;
+                
+                prompt = `Act as an expert Chartered Accountant specializing in SME IPOs in India. 
+                I have a client in Jamnagar with the following profile:
+                - Industry: ${industry}
+                - Annual Turnover: ${turnover}
+                - Current Legal Structure: ${structure}
+                
+                Provide a concise, professional 3-point strategic roadmap for this client to get listed on NSE Emerge or BSE SME. 
+                Focus on the specific challenges of their structure and industry. Use professional formatting.`;
+            } else {
+                const docType = document.getElementById('ai-doc-type').value;
+                const clientName = document.getElementById('ai-client-name').value || "The Client";
+                const docName = document.getElementById('ai-doc-type').options[document.getElementById('ai-doc-type').selectedIndex].text;
+
+                prompt = `Act as an expert Chartered Accountant. Draft a professional ${docName} for a client named "${clientName}". 
+                The tone should be formal, professional, and compliant with Indian business standards. 
+                Keep it concise but cover the essential clauses/points.`;
+            }
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }]
+                    })
+                });
+
+                const data = await response.json();
+                const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't generate a response. Please try again.";
+
+                resultDiv.innerHTML = marked.parse(text);
+                outputContainer.classList.remove('hidden');
+                outputContainer.scrollIntoView({ behavior: 'smooth' });
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                resultDiv.innerHTML = "<p class='text-red-600'>Error connecting to AI service. Please check your connection and try again.</p>";
+                outputContainer.classList.remove('hidden');
+            } finally {
+                btnText.classList.remove('hidden');
+                spinner.classList.add('hidden');
+            }
+        }
+
+        function copyToClipboard() {
+            const text = document.getElementById('ai-result').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Text copied to clipboard!");
+            });
+        }
+
+        // --- Core App Logic ---
+        let charts = {};
+
+        function navigate(targetId) {
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                if(btn.dataset.target === targetId) {
+                    btn.classList.add('nav-active');
+                    btn.classList.remove('text-gray-500');
+                    if(targetId === 'ai-consultant') {
+                        btn.classList.remove('text-indigo-600'); 
+                        btn.style.color = '#7b341e';
+                    }
+                } else {
+                    btn.classList.remove('nav-active');
+                    btn.classList.add('text-gray-500');
+                    btn.style.color = '';
+                    if(btn.dataset.target === 'ai-consultant') {
+                         btn.classList.add('text-indigo-600');
+                    }
+                }
+            });
+
+            ['dashboard', 'guide', 'jamnagar', 'toolkit', 'contacts', 'ai-consultant'].forEach(id => {
+                const el = document.getElementById(id);
+                if(id === targetId) {
+                    el.classList.remove('hidden');
+                    if(id === 'dashboard') initDashboardCharts();
+                    if(id === 'jamnagar') initJamnagarCharts();
+                    if(id === 'toolkit') { calculateFees(); }
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            window.scrollTo(0, 0);
+        }
+
+        function initDashboardCharts() {
+            if(charts.debtVsEquity) return;
+            const ctx = document.getElementById('debtVsEquityChart').getContext('2d');
+            charts.debtVsEquity = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Bank Loan (Debt)', 'IPO (Equity)'],
+                    datasets: [{
+                        label: 'Valuation / Capital Access Multiplier',
+                        data: [1, 15],
+                        backgroundColor: ['#cbd5e0', '#c05621'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { label: (ctx) => ctx.dataIndex === 0 ? ' Limited by Collateral (1x)' : ' Based on Future Earnings (15x-25x PE)' } }
+                    },
+                    scales: { y: { display: false, beginAtZero: true }, x: { grid: { display: false } } }
+                }
+            });
+        }
+
+        function initJamnagarCharts() {
+            if(charts.jamnagar) return;
+            const ctx = document.getElementById('jamnagarChart').getContext('2d');
+            charts.jamnagar = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Brass Parts & Hardware', 'Petroleum Ancillary', 'Salt/Chemicals', 'Engineering', 'Others'],
+                    datasets: [{
+                        data: [55, 15, 12, 10, 8],
+                        backgroundColor: ['#c05621', '#2d3748', '#4299e1', '#a0aec0', '#e2e8f0'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'right', labels: { boxWidth: 12, padding: 20 } } },
+                    layout: { padding: 20 }
+                }
+            });
+        }
+
+        // --- FEE & ELIGIBILITY CALCULATORS ---
+
+        function calculateFees() {
+            const size = parseFloat(document.getElementById('issueSize').value);
+            const complexity = document.getElementById('complexity').value;
+            document.getElementById('issueSizeVal').innerText = `₹${size} Cr`;
+            
+            let baseRate = 0;
+            if (complexity === 'low') baseRate = 0.005;
+            if (complexity === 'med') baseRate = 0.008;
+            if (complexity === 'high') baseRate = 0.012;
+
+            let restructureFee = 0;
+            if (complexity === 'low') restructureFee = 300000;
+            if (complexity === 'med') restructureFee = 700000;
+            if (complexity === 'high') restructureFee = 1500000;
+
+            let certFee = (size * 10000000) * (baseRate * 0.4); 
+            let advisoryFee = restructureFee + ((size * 10000000) * (baseRate * 0.6));
+            let total = advisoryFee + certFee;
+
+            const format = (num) => "₹" + (num / 100000).toFixed(2) + " Lakhs";
+
+            document.getElementById('advisoryFee').innerText = format(advisoryFee);
+            document.getElementById('certFee').innerText = format(certFee);
+            document.getElementById('totalFee').innerText = format(total);
+        }
+
+        function checkEligibility() {
+            // Inputs
+            const capital = parseFloat(document.getElementById('check-capital').value) || 0;
+            const assets = parseFloat(document.getElementById('check-assets').value) || 0;
+            const networth = parseFloat(document.getElementById('check-networth').value) || 0;
+            const profitYrs = parseInt(document.getElementById('check-profit').value) || 0;
+            const trackYrs = parseInt(document.getElementById('check-track').value) || 0;
+            const discipline = document.getElementById('check-discipline').value;
+
+            const resBSE = document.getElementById('result-bse');
+            const resNSE = document.getElementById('result-nse');
+            const suggestionBox = document.getElementById('result-suggestions');
+            const suggestionList = document.getElementById('suggestion-list');
+
+            let suggestions = [];
+
+            // Disciplinary Check
+            if (discipline === 'yes') {
+                resBSE.innerHTML = `<span class="font-bold text-red-600">NOT ELIGIBLE</span> (Disciplinary Action Pending)`;
+                resNSE.innerHTML = `<span class="font-bold text-red-600">NOT ELIGIBLE</span> (Disciplinary Action Pending)`;
+                suggestionList.innerHTML = "<li>Resolve all pending SEBI/RBI/ROC cases against promoters before applying.</li>";
+                suggestionBox.classList.remove('hidden');
+                return;
+            }
+
+            // --- BSE SME Logic ---
+            let bseEligible = true;
+            let bseIssues = [];
+
+            if (capital > 25) { bseEligible = false; bseIssues.push("Post-issue capital exceeds ₹25Cr. You must list on Main Board."); }
+            if (assets < 1.5) { bseEligible = false; bseIssues.push(`BSE requires Min ₹1.5 Cr Net Tangible Assets. You have ₹${assets} Cr.`); }
+            if (trackYrs < 3) { bseEligible = false; bseIssues.push(`BSE requires 3 Years Track Record. You have ${trackYrs} years.`); }
+            if (profitYrs < 2) { bseEligible = false; bseIssues.push("BSE requires operating profit in 2 out of 3 years."); }
+            if (networth <= 0) { bseEligible = false; bseIssues.push("Net worth must be positive."); }
+
+            if (bseEligible) {
+                resBSE.innerHTML = `<span class="font-bold text-green-600">✅ ELIGIBLE for BSE SME</span>`;
+            } else {
+                resBSE.innerHTML = `<span class="font-bold text-red-600">❌ Not Eligible</span>`;
+                bseIssues.forEach(i => suggestions.push("BSE: " + i));
+            }
+
+            // --- NSE Emerge Logic ---
+            let nseEligible = true;
+            let nseIssues = [];
+
+            if (capital > 25) { nseEligible = false; nseIssues.push("Post-issue capital exceeds ₹25Cr. Move to Main Board."); }
+            if (trackYrs < 3) { nseEligible = false; nseIssues.push(`NSE requires 3 Years Track Record. You have ${trackYrs} years.`); }
+            if (profitYrs < 2) { nseEligible = false; nseIssues.push("NSE requires positive cash accruals (operating profit) in 2 years."); }
+            if (networth <= 0) { nseEligible = false; nseIssues.push("Net worth must be positive."); }
+            
+            // Note: NSE doesn't explicitly state 1.5cr NTA like BSE, but focuses on net worth and profit.
+
+            if (nseEligible) {
+                resNSE.innerHTML = `<span class="font-bold text-green-600">✅ ELIGIBLE for NSE Emerge</span>`;
+            } else {
+                resNSE.innerHTML = `<span class="font-bold text-red-600">❌ Not Eligible</span>`;
+                nseIssues.forEach(i => suggestions.push("NSE: " + i));
+            }
+
+            // Display Suggestions
+            if (suggestions.length > 0) {
+                suggestionList.innerHTML = suggestions.map(s => `<li>${s}</li>`).join('');
+                suggestionBox.classList.remove('hidden');
+            } else {
+                suggestionList.innerHTML = "<li>Client meets criteria for both exchanges! Proceed to Due Diligence.</li>";
+                suggestionBox.classList.remove('hidden');
+            }
+        }
+
+        window.onload = function() {
+            initDashboardCharts();
+            calculateFees();
+        };
+    </script>
+</body>
+</html>
